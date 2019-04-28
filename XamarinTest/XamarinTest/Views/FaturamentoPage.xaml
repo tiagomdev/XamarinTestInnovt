@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTest.Views.FaturamentoPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Margin="0,0,0,0" VerticalOptions="Fill">
+            <Grid BackgroundColor="#131313" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"
+                       FontSize="14" Text="CAMAROTE BRAHMA 2019" />
+                    <Image Source="icon_arrow_down.png" HeightRequest="12" VerticalOptions="Center" HorizontalOptions="Center" />
+                </StackLayout>
+            </Grid>
+            <StackLayout Spacing="3" Margin="15,10,15,0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                
+                <Grid HeightRequest="40" BackgroundColor="Green">
+                    <Label Margin="10,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" Text="FATURAMENTO" TextColor="White" />
+                    <Label Margin="0,0,10,0" HorizontalOptions="End" VerticalOptions="Center" Text="R$ 10.888.291,820" TextColor="White" />
+                </Grid>
+                <Grid HeightRequest="40" BackgroundColor="#512882">
+                    <Label Margin="10,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" Text="INGRESSOS" TextColor="White" />
+                    <Label Margin="0,0,10,0" HorizontalOptions="End" VerticalOptions="Center" Text="100.000.000" TextColor="White" />
+                </Grid>
+                <Grid HeightRequest="40" BackgroundColor="#121212">
+                    <Label Margin="10,0,0,0" HorizontalOptions="Start" VerticalOptions="Center" Text="TICKET MÉDIO" TextColor="White" />
+                    <Label Margin="0,0,10,0" HorizontalOptions="End" VerticalOptions="Center" Text="R$ 90,00" TextColor="White" />
+                </Grid>
+            </StackLayout>
+            <Grid Margin="15,20,15,0" BackgroundColor="#131313" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="10">
+                <StackLayout Spacing="120" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                        <Label  TextColor="White" FontSize="14" Text="FATURAMENTO POR PREÇO" />
+                        <Image Source="icon_arrow_down.png" HeightRequest="12" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Spacing="10" Margin="0,0,0,0" VerticalOptions="Center" HorizontalOptions="End" Orientation="Horizontal">
+                        <Image Source="icon_share.png" HeightRequest="15"  />
+                        <Image Source="icon_filter.png" HeightRequest="15" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <ListView SeparatorColor="Gray" ItemsSource="{Binding FaturamentoLista}" VerticalOptions="Fill" Margin="15,10,15,0" HorizontalOptions="FillAndExpand" HeightRequest="260">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label  Margin="15,0,0,0" VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="DATA" FontAttributes="Bold" Grid.Column="0" TextColor="Black" />
+                        <Label VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="INGRESSOS" FontAttributes="Bold" Grid.Column="1" TextColor="Black" />
+                        <Label Margin="0,0,15,0" VerticalOptions="Center" HorizontalTextAlignment="End" HorizontalOptions="End" Text="FATURAMENTO" FontAttributes="Bold" Grid.Column="2" TextColor="Black" />
+                        <BoxView Margin="0,30,0,0" Grid.ColumnSpan="3" VerticalOptions="End" Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand"></BoxView>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Margin="15,0,0,0" VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="{Binding Data}" Grid.Column="0" TextColor="Black" />
+                                <Label  VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="{Binding Ingresso}"  Grid.Column="1" TextColor="Black" />
+                                <Label  Margin="0,0,15,0" VerticalOptions="Center" HorizontalTextAlignment="End" HorizontalOptions="End" Text="{Binding Faturamento}" Grid.Column="2" TextColor="Black" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label  Margin="15,0,0,0" VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="TOTAL" FontAttributes="Bold" Grid.Column="0" TextColor="Black" />
+                        <Label VerticalOptions="Center" HorizontalTextAlignment="Start" HorizontalOptions="Start" Text="100.000.000" FontAttributes="Bold" Grid.Column="1" TextColor="Black" />
+                        <Label Margin="0,0,15,0" VerticalOptions="Center" HorizontalTextAlignment="End" HorizontalOptions="End" Text="R$ 1.200.200,20" FontAttributes="Bold" Grid.Column="2" TextColor="Black" />
+                        <BoxView Margin="0,30,0,0" Grid.ColumnSpan="3" VerticalOptions="End" Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand"></BoxView>
+                    </Grid>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

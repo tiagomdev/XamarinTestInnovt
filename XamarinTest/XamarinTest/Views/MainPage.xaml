@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:XamarinTest.Views"
+            x:Class="XamarinTest.Views.MainPage"
+            BarBackgroundColor="#131313">
+    <TabbedPage.Children>
+        <NavigationPage Icon="icon_revenue.png" Title="Faturamento">
+            <x:Arguments>
+                <views:FaturamentoPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Icon="icon_logout.png" Title="Acesso">
+            <x:Arguments>
+                <views:AcessoPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Mais">
+            <x:Arguments>
+                <views:MaisPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>

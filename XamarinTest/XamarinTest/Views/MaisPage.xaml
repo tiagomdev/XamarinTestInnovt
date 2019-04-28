@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTest.Views.MaisPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#1B1B1B" Margin="0,0,0,0" VerticalOptions="Fill">
+            <Grid BackgroundColor="#131313" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"
+                       FontSize="14" Text="SELECIONE O EVENTO" />
+                    <Image Source="icon_arrow_down.png" HeightRequest="12" VerticalOptions="Center" HorizontalOptions="Center" />
+                </StackLayout>
+            </Grid>
+            <StackLayout Spacing="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="not_found.png" HeightRequest="150" HorizontalOptions="CenterAndExpand" />
+                <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"
+                       FontSize="18" Text="Nenhum dado encontrado" />
+                <Label Style="{StaticResource LabelForm}" FontSize="16" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" WidthRequest="220"
+                       Text="Para ter acesso aos dados por favor selecione um evento"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

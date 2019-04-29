@@ -10,16 +10,16 @@
         <StackLayout Spacing="15" Margin="20,0,20,0">
             <Image HeightRequest="60" HorizontalOptions="CenterAndExpand" Margin="0,50,0,0" Source="logo.jpg" />
 
-            <StackLayout Spacing="-8" Margin="0,80,0,0">
-                <Label Style="{StaticResource LabelForm}" Margin="4,0,0,0" HorizontalOptions="FillAndExpand" Text="EMPRESA" />
+            <StackLayout Spacing="0" Margin="0,80,0,0">
+                <Label Style="{StaticResource LabelForm}" HorizontalOptions="FillAndExpand" Text="EMPRESA" />
                 <Entry HorizontalOptions="FillAndExpand" FontSize="14" TextColor="White" Text="TOTAL ACESSO" />
             </StackLayout>
-            <StackLayout Spacing="-8">
-                <Label Style="{StaticResource LabelForm}" Margin="4,0,0,0" HorizontalOptions="FillAndExpand" Text="E-MAIL" />
+            <StackLayout Spacing="0">
+                <Label Style="{StaticResource LabelForm}"  HorizontalOptions="FillAndExpand" Text="E-MAIL" />
                 <Entry Keyboard="Email" HorizontalOptions="FillAndExpand" FontSize="14" TextColor="White" Text="email@totalacesso.com" />
             </StackLayout>
-            <StackLayout Spacing="-8">
-                <Label Style="{StaticResource LabelForm}" Margin="4,0,0,0" HorizontalOptions="FillAndExpand" Text="SENHA" />
+            <StackLayout Spacing="0">
+                <Label Style="{StaticResource LabelForm}" HorizontalOptions="FillAndExpand" Text="SENHA" />
                 <Entry IsPassword="true" HorizontalOptions="FillAndExpand" FontSize="14" TextColor="White" Text="teste" />
             </StackLayout>
             <Button Margin="0,20,0,0" HorizontalOptions="FillAndExpand" CornerRadius="5" Text="ENTRAR" TextColor="White" Padding="10" BackgroundColor="#00BDD9" />
